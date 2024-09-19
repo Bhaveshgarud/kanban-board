@@ -1,0 +1,70 @@
+.kanban-board {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .board-columns {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  .board-column {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    background-color: #f4f5f7;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-tickets {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+  }
+  
+  .cancelled-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: bold;
+    color: #6b6f76;
+  }
+  
+  @media (max-width: 768px) {
+    .board-columns {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .board-column {
+      flex: 0 0 auto;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .cancelled-text {
+      position: static;
+      text-align: right;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Existing styles for ticket-count and priority-indicator */
+  .ticket-count {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #6b6f76;
+  }
+  
+  .priority-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 8px;
+    display: inline-block;
+  }
